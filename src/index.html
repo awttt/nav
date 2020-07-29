@@ -58,17 +58,11 @@ let str = ''
     data: {ip: '',
     },
     type: "get",
+
     dataType: "json",
     success: function (data) {
-      console.log(data.showapi_res_body)
-     console.log(data.showapi_res_body.cityInfo.c3)
-      let area = data.showapi_res_body.cityInfo.c9+' '+data.showapi_res_body.cityInfo.c7
-      +' '+data.showapi_res_body.cityInfo.c5
-      $('.area').html(area)
-      console.log(data.showapi_res_body.f1.day_air_temperature)
-      temperature=data.showapi_res_body.f1.day_air_temperature
-
-      $('.weather').html(temperature)
+      console.log(data)
+     
 
     },
     beforeSend: function (xhr) {
